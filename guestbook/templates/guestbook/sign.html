@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign page</title>
+</head>
+<body>
+	
+	<form method='POST' action="{% url 'sign' %}">
+	{% csrf_token %}
+	<h2 align='left'>Guest Sign Form</h2>
+	<table>
+	<tr>
+	<td><label>name</label></td>
+	
+	<td>{{ form.name }}</td>
+    </tr>
+    <tr>
+	<td><label>Comment</label></td>
+	
+	<td>{{ form.comment }}</td>
+	<tr>
+	<td></td><td><button type='submit' > Sign </button></td>
+	</tr>
+	</table>	
+	</form>
+
+</body>
+</html>

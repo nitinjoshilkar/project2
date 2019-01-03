@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+</head>
+<body>
+
+<h2>GUEST BOOK</h2>
+<a type='button' href="{% url 'sign' %}">Sign the guest book</a>
+{% for c in comments %}
+<h4>{{ c.name }}</h4>
+<p>{{ c.comment }}</p>
+<p>{{ c.date_added }}
+<p>-------------------------------------------------------------------------------</p>
+{% endfor %}
+
+</body>
+</html>
